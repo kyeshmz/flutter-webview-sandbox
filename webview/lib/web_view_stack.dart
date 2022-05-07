@@ -28,8 +28,7 @@ class _WebViewStackState extends State<WebViewStack> {
               gestureNavigationEnabled: false,
               allowsInlineMediaPlayback: true,
               initialMediaPlaybackPolicy: AutoMediaPlaybackPolicy.always_allow,
-              initialUrl: 'https://stg-customize.baobaoisseymiyakedazzle.com',
-              // initialUrl: 'http://10.0.0.92:3000',
+              initialUrl: 'http://127.0.0.1:3000',
 
               onWebViewCreated: (webViewController) {
                 widget.controller.complete(webViewController);
@@ -98,13 +97,13 @@ class _WebViewStackState extends State<WebViewStack> {
             {
               _controller!.runJavascript('''var date = new Date();
     date.setTime(date.getTime()+(30*24*60*60*1000));
-    document.cookie = "store=${message.toLowerCase()}; expires=" + date.toGMTString();''')
+    document.cookie = "fruit=${message.toLowerCase()}; expires=" + date.toGMTString();''')
             }
           else
             {
               _controller!.runJavascript('''var date = new Date();
     date.setTime(date.getTime()+(30*24*60*60*1000));
-    document.cookie = "store=${message.toLowerCase()}; expires=" + date.toGMTString();''')
+    document.cookie = "fruit=${message.toLowerCase()}; expires=" + date.toGMTString();''')
             }
         });
   }
